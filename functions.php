@@ -14,3 +14,22 @@ function my_theme_enqueue_styles() {
 		$theme->get( 'Version' ) // This only works if you have Version defined in the style header.
 	);
 }
+add_action( 'woocommerce_single_product_summary', 'my_extra_button_on_product_page', 30 );
+
+function my_extra_button_on_product_page() {
+  global $product;
+  echo '<a href="URL">Extra Button</a>';
+}
+
+add_action( 'woocommerce_single_product_summary', 'custom_product_title', 5 );
+function custom_product_title() {
+	$value = get_field( "product_sub_title", 61 );
+
+
+    echo '<h1 class="custom-product-title">' . get_the_title() . ' ' . get_the_date() . ' </h1>';
+	if( $value ) {
+		echo $value;
+	} else {
+		echo 'empty';
+	}
+}
