@@ -30,6 +30,6 @@ function custom_product_title() {
 	if( $value ) {
 		echo $value;
 	} else {
-		echo 'empty';
+		echo 'test';
 	}
 }
