@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/hk7tqbm9txhe/public_html
+    - /bin/cp -R /woocommerce.roeljohnbobis.com/wp-content/themes/twentytwentyonechild $DEPLOYPATH
