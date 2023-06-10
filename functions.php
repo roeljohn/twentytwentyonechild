@@ -33,3 +33,9 @@ function custom_product_title() {
 		echo 'test';
 	}
 }
+
+add_action( 'woocommerce_after_cart_table', 'show_product_list');
+
+function show_product_list(){
+	require_once( __DIR__ . '/functions/add-to-cart-add-on.php');
+}
